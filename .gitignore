@@ -53,3 +53,7 @@ dkms.conf
 
 # For Debug
 test.c
+
+# vim swp
+*.swp
+*.swo
