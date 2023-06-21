@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:46:20 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 21:52:31 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/21 21:58:03 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	ft_printf(char *fmt, ...)
 			fmt = printf_vainc(fmt, ap, 's');
 		else if (fmt[0] == '%' && fmt[1] == 'p')
 			fmt = printf_vainc(fmt, ap, 'p');
+		else if (fmt[0] == '%' && fmt[1] == 'd')
+			fmt = printf_vainc(fmt, ap, 'd');
 		else
 			write(1, fmt++, 1);
 	}
