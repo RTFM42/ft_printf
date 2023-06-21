@@ -6,13 +6,14 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 19:01:42 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 22:19:27 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/21 23:33:12 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef EXTRA_LIBFT_H
 # define EXTRA_LIBFT_H
 # include <stddef.h>
+# include <stdarg.h>
 # include "../libft/libft.h"
 
 void	ft_putptr_fd(void *ptr, int fd);

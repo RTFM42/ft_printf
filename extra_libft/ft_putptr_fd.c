@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 22:14:35 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 22:16:22 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/21 23:42:21 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@
 void	ft_putptr_fd(void *ptr, int fd)
 {
 	write(fd, "0x", 2);
-	ft_putubnbr_fd((size_t)ptr, "0123456789abcdef", fd);
+	ft_putunbr_base_fd((size_t)ptr, "0123456789abcdef", fd);
 }
