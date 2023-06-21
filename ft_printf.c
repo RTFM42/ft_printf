@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:46:20 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 19:30:36 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/21 20:13:32 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,19 @@ void ft_printf(char *fmt, ...)
 			return ;
 		if (ft_memcmp(fmt, "%c", 2) == 0)
 		{
-			fmt += 2;
-			*s = (char)va_arg(ap, int);
-			write(1, s, 1);
+			if (++fmt && fmt++)
+				ft_putchar_fd((char)va_arg(ap, int), 1);
 		}
 		else if (ft_memcmp(fmt, "%s", 2) == 0)
+		{
 			if (++fmt && fmt++)
-			ft_putstr_fd(va_arg(ap, const char *), 1);
+				ft_putstr_fd(va_arg(ap, const char *), 1);
+		}
 		else if (ft_memcmp(fmt, "%p", 2) == 0)
+		{
 			if (++fmt && fmt++)
-				ft_putul16_fd((size_t)va_arg(ap, void *), 1);
+				ft_putptr_fd(va_arg(ap, void *), 1);
+		}
 		else
 			write(1, fmt++, 1);
 	}
@@ -48,6 +51,6 @@ void ft_printf(char *fmt, ...)
 
 int	main(void)
 {
-	ft_printf("test%ctest\n", 't');
+	ft_printf("c\t:%c\nstr\t:%s\nptr\t:%p\n", 't', "test", "ppp");
 	return (0);
 }

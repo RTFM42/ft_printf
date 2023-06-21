@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_digit.c                                   :+:      :+:    :+:   */
+/*   ft_putptr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/19 19:05:29 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 19:51:42 by yushsato         ###   ########.fr       */
+/*   Created: 2023/06/21 20:06:01 by yushsato          #+#    #+#             */
+/*   Updated: 2023/06/21 20:08:03 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "extra_libft.h"
 
-size_t	ft_count_digit(long long n, int base)
+void	ft_putptr_fd(void *p, int fd)
 {
-	size_t	ans;
-
-	if (n < 0)
-		ans = 1;
-	else
-		ans = 0;
-	while (n)
-	{
-		ans++;
-		n /= base;
-	}
-	return (ans);
+	write(fd, "0x", 2);
+	ft_putnbr_fd((size_t)p, fd);
 }

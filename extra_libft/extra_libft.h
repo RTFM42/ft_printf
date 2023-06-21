@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 19:01:42 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 17:28:07 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/21 21:11:29 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 # include <stddef.h>
 # include "../libft/libft.h"
 
-size_t	ft_count_digit(long long n, int base);
-char	*ft_itoa_base(long long n, int base);
 void	ft_putul16_fd(size_t n, int fd);
+void	ft_putptr_fd(void *p, int fd);
 
 #endif
