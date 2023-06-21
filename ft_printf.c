@@ -6,13 +6,14 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:46:20 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 18:25:41 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/21 18:30:13 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
 #include <unistd.h>
 #include "ft_printf.h"
+#include "./libft/libft.h"
 
 void ft_printf(char *fmt, ...)
 {
