@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:46:20 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 18:13:06 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/21 18:25:41 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void ft_printf(char *fmt, ...)
 {
 	va_list	ap;
 	int		d;
-	void	*s;
+	char	*s;
 
 	va_start(ap, fmt);
 	while (*fmt)
@@ -34,37 +34,19 @@ void ft_printf(char *fmt, ...)
 			write(1, s, 1);
 		}
 		else if (ft_strncmp(fmt, "%s", 2) == 0)
-		{
-			fmt += 2;
-			s = va_arg(ap, const char *);
-			ft_putstr_fd(s, 1);
-		}
+			if (++fmt && fmt++)
+			ft_putstr_fd(va_arg(ap, const char *), 1);
 		else if (ft_strncmp(fmt, "%p", 2) == 0)
-		{
-			fmt += 2;
-			s = (char *);
-			ft_putul16_fd((size_t)va_arg(ap, void *), 1);
-		}
+			if (++fmt && fmt++)
+				ft_putul16_fd((size_t)va_arg(ap, void *), 1);
 		else
-		{
-			write(1, fmt, 1);
-			fmt++;
-		}
+			write(1, fmt++, 1);
 	}
-//		switch(*fmt++) {
-//			case 's':
-//			s = va_arg(ap, char *);
-//			printf("string %s\n", s);
-//			break;
-//		case 'd':		       /* int */
-//			d = va_arg(ap, int);
-//			printf("int %d\n", d);
-//			break;
-//		case 'c':		       /* char */
-//			/* Note: char is promoted to int. */
-//			c = va_arg(ap, int);
-//			printf("char %c\n", c);
-//			break;
-//		}
 	va_end(ap);
+}
+
+int	main(void)
+{
+	ft_printf("test%ctest\n", 't');
+	return (0);
 }
