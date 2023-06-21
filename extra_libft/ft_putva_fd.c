@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 21:34:27 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 23:17:37 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/21 23:23:55 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_putva_fd(char type, va_list ap, int fd)
 	if (type == 'c')
 		ft_putchar_fd((char)va_arg(ap, int), fd);
 	else if (type == 's')
-		ft_putchar_fd(va_arg(ap, char *), fd);
+		ft_putstr_fd(va_arg(ap, char *), fd);
 	else if (type == 'p')
 		ft_putptr_fd(va_arg(ap, void *), fd);
 	else if (type == 'd')

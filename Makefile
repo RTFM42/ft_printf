@@ -6,7 +6,7 @@
 #    By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 20:23:39 by yushsato          #+#    #+#              #
-#    Updated: 2023/06/21 19:53:36 by yushsato         ###   ########.fr        #
+#    Updated: 2023/06/21 23:28:22 by yushsato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,11 @@ INCL	= -Ift_printf.h \
 SRCS	= ft_printf.c \
 		  libft/ft_putstr_fd.c \
 		  libft/ft_memcmp.c \
-		  extra_libft/ft_putul16_fd.c
-OBJS	= $(SRCS:.c=.o)
+		  fn_punpnr_fd.c \
+		  fn_pununbr_base_fd.c \
+		  fn_pununbr_fd.c \
+		  fn_punva_fd.c
+OBJa= $(SRCS:.c=.o)
 
 all: $(NAME)
 
