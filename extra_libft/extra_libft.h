@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 19:01:42 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 21:11:29 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/21 21:56:33 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 # include <stddef.h>
 # include "../libft/libft.h"
 
-void	ft_putul16_fd(size_t n, int fd);
 void	ft_putptr_fd(void *p, int fd);
+void	ft_putul16_fd(size_t n, int fd);
+int		ft_putva_fd(char type, va_list ap, int fd);
 
 #endif
