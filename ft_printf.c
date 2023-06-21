@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:46:20 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 16:29:26 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/21 18:13:06 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ void ft_printf(char *fmt, ...)
 		else if (ft_strncmp(fmt, "%p", 2) == 0)
 		{
 			fmt += 2;
-			s = (char *)va_arg(ap, void *);
-			ft_putptr_fd(s);
+			s = (char *);
+			ft_putul16_fd((size_t)va_arg(ap, void *), 1);
 		}
 		else
 		{
