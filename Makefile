@@ -6,7 +6,7 @@
 #    By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 20:23:39 by yushsato          #+#    #+#              #
-#    Updated: 2023/06/21 23:40:35 by yushsato         ###   ########.fr        #
+#    Updated: 2023/06/21 23:43:58 by yushsato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,9 @@ SRCS	= ft_printf.c \
 		  libft/ft_memcmp.c \
 		  libft/ft_putnbr_fd.c \
 		  libft/ft_putchar_fd.c \
+		  libft/ft_strlen.c \
 		  extra_libft/ft_putptr_fd.c \
+		  extra_libft/ft_putunbr_fd.c \
 		  extra_libft/ft_putunbr_base_fd.c \
 		  extra_libft/ft_putva_fd.c
 OBJS= $(SRCS:.c=.o)

@@ -6,11 +6,12 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:46:20 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 23:24:33 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/21 23:51:12 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h> 
 
 static int	is_include(char c, char *s)
 {
@@ -28,10 +29,13 @@ void	ft_printf(char *fmt, ...)
 	va_start(ap, fmt);
 	while (*fmt)
 	{
+		printf("[%s]:(%d)\n", __func__, __LINE__);
 		while (*fmt && *fmt != '%')
 			ft_putchar_fd(*fmt++, 1);
+		printf("[%s]:(%d)\n", __func__, __LINE__);
 		if (*fmt == '\0')
 			return ;
+		printf("[%s]:(%d)\n", __func__, __LINE__);
 		if (fmt[0] == '%' && fmt[1] != '\0')
 		{
 			flag = is_include(fmt[1], "cspdiuxX");
@@ -49,6 +53,7 @@ void	ft_printf(char *fmt, ...)
 
 int	main(void)
 {
+	printf("main\n");
 	ft_printf("c\t:%c\nstr\t:%s\nptr\t:%p\n", 't', "test", "ppp");
 	ft_printf("d\t:%d\ni\t:%s\nu\t:%p\n", -1, -10, 10);
 	ft_printf("x\t:%c\nX\t:%p\n", 12345, 12345);
