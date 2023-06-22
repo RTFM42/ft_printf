@@ -6,7 +6,7 @@
 #    By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 20:23:39 by yushsato          #+#    #+#              #
-#    Updated: 2023/06/22 17:36:53 by yushsato         ###   ########.fr        #
+#    Updated: 2023/06/22 17:53:14 by yushsato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ FLAGS	= -Wall -Wextra -Werror
 INCL	= -Ift_printf.h \
 		  -Ilibft/libft.h \
 		  -Iextra/extra.h
+
 SRCS	= ft_printf.c \
 		  libft/ft_memcmp.c \
 		  libft/ft_putstr_fd.c \
@@ -29,6 +30,7 @@ SRCS	= ft_printf.c \
 		  extra/ex_putunbr_base_fd.c \
 		  extra/ex_putunbr_fd.c \
 		  extra/ex_putva_fd.c
+
 OBJS	= $(SRCS:.c=.o)
 
 all: $(NAME)
