@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:46:20 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/21 23:51:12 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/22 16:25:04 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,17 @@ void	ft_printf(char *fmt, ...)
 	va_start(ap, fmt);
 	while (*fmt)
 	{
-		printf("[%s]:(%d)\n", __func__, __LINE__);
 		while (*fmt && *fmt != '%')
 			ft_putchar_fd(*fmt++, 1);
-		printf("[%s]:(%d)\n", __func__, __LINE__);
 		if (*fmt == '\0')
 			return ;
-		printf("[%s]:(%d)\n", __func__, __LINE__);
 		if (fmt[0] == '%' && fmt[1] != '\0')
 		{
 			flag = is_include(fmt[1], "cspdiuxX");
 			if (flag)
 			{
+				ft_putva_fd((const char)fmt[1], ap, 1);
 				fmt += 2;
-				ft_putva_fd(fmt[1], ap, 1);
 			}
 		}
 		else
@@ -53,9 +50,8 @@ void	ft_printf(char *fmt, ...)
 
 int	main(void)
 {
-	printf("main\n");
-	ft_printf("c\t:%c\nstr\t:%s\nptr\t:%p\n", 't', "test", "ppp");
-	ft_printf("d\t:%d\ni\t:%s\nu\t:%p\n", -1, -10, 10);
-	ft_printf("x\t:%c\nX\t:%p\n", 12345, 12345);
+	ft_printf("c\t:%c\ns\t:%s\np\t:%p\n", 't', "test", "ppp");
+	ft_printf("d\t:%d\ni\t:%i\nu\t:%u\n", -1, -10, 10);
+	ft_printf("x\t:%x\nX\t:%X\n", 12345, 12345);
 	return (0);
 }
