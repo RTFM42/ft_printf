@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putul16_fd.c                                    :+:      :+:    :+:   */
+/*   extra_libft.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/21 16:30:28 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/22 16:55:41 by yushsato         ###   ########.fr       */
+/*   Created: 2023/06/19 19:01:42 by yushsato          #+#    #+#             */
+/*   Updated: 2023/06/22 17:18:43 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "extra_libft.h"
+#ifndef EXTRA_H
+# define EXTRA_H
+# include <stddef.h>
+# include <stdarg.h>
+# include <unistd.h>
+# include <stdio.h>
+# include "../libft/libft.h"
 
-int	ft_putunbr_base_fd(size_t n, const char *base, int fd)
-{
-	int	len;
-	int	res;
+void	ft_putptr_fd(void *ptr, int fd);
+void	ft_putunbr_base_fd(size_t n, const char *base, int fd);
+void	ft_putunbr_fd(size_t n, int fd);
+int		ft_putva_fd(const char type, va_list ap, int fd);
 
-	len = ft_strlen(base);
-	res = 1;
-	if (n / len > 0)
-		res += ft_putunbr_base_fd(n / len, base, fd);
-	write(fd, &base[n % len], 1);
-	return (res);
-}
+#endif

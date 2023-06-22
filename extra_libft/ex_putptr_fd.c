@@ -6,14 +6,14 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 22:14:35 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/22 16:59:00 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/22 17:12:05 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "extra_libft.h"
 
-int	ft_putptr_fd(void *ptr, int fd)
+int	ex_putptr_fd(void *ptr, int fd)
 {
 	int	len;
 
