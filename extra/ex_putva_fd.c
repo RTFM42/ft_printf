@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 21:34:27 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/22 21:13:06 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/22 22:08:13 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	ex_putva_fd(const char type, va_list ap, int fd)
 		len = ex_putunbr_fd(va_arg(ap, unsigned int), fd);
 	if (type == 'x')
 		len = ex_putunbr_base_fd((size_t)va_arg(ap, unsigned int),
-			"0123456789abcdef", fd);
+				"0123456789abcdef", fd);
 	if (type == 'X')
 		len = ex_putunbr_base_fd((size_t)va_arg(ap, unsigned int),
-			"0123456789ABCDEF", fd);
+				"0123456789ABCDEF", fd);
 	return (len);
 }
