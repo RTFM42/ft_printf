@@ -6,11 +6,11 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 17:04:47 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/22 17:10:59 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/22 21:12:47 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "extra_libft.h"
+#include "extra.h"
 
 int	ex_putstr_fd(const char *str, int fd)
 {

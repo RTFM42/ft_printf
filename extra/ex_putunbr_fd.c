@@ -6,11 +6,11 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 22:05:29 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/22 17:26:37 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/22 21:12:35 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "extra_libft.h"
+#include "extra.h"
 
 int	ex_putunbr_fd(size_t n, int fd)
 {
