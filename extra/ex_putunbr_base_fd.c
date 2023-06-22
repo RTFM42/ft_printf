@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 16:30:28 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/22 21:12:19 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/22 21:17:32 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ex_putunbr_base_fd(size_t n, const char *base, int fd)
 	len = ft_strlen(base);
 	res = 1;
 	if (n / len > 0)
-		res += ft_putunbr_base_fd(n / len, base, fd);
+		res += ex_putunbr_base_fd(n / len, base, fd);
 	write(fd, &base[n % len], 1);
 	return (res);
 }

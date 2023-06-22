@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 17:04:47 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/22 21:12:47 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/22 21:16:56 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ex_putstr_fd(const char *str, int fd)
 		ft_putstr_fd("(null)", fd);
 		return (len);
 	}
-	len = ft_strlen(strlen);
-	ft_putstr_fd(str, fd);
+	len = ft_strlen(str);
+	ft_putstr_fd((char *)str, fd);
 	return (len);
 }
