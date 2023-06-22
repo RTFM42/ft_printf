@@ -57,3 +57,6 @@ test.c
 # vim swp
 *.swp
 *.swo
+
+# tester
+ft_printf_tester
