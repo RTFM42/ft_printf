@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:46:20 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/22 16:25:04 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/22 17:47:53 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,31 +21,33 @@ static int	is_include(char c, char *s)
 	return (0);
 }
 
-void	ft_printf(char *fmt, ...)
+int	ft_printf(char *fmt, ...)
 {
 	va_list	ap;
 	int		flag;
+	int		len;
 
 	va_start(ap, fmt);
+	len = 0;
 	while (*fmt)
 	{
-		while (*fmt && *fmt != '%')
-			ft_putchar_fd(*fmt++, 1);
-		if (*fmt == '\0')
-			return ;
 		if (fmt[0] == '%' && fmt[1] != '\0')
 		{
 			flag = is_include(fmt[1], "cspdiuxX");
 			if (flag)
 			{
-				ft_putva_fd((const char)fmt[1], ap, 1);
+				len += ex_putva_fd((const char)fmt[1], ap, 1);
 				fmt += 2;
 			}
 		}
 		else
-			write(1, fmt++, 1);
+		{
+			len++;
+			ft_putchar_fd(*fmt++, 1);
+		}
 	}
 	va_end(ap);
+	return (len);
 }
 
 int	main(void)
