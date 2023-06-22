@@ -6,11 +6,11 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 22:14:35 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/22 17:20:32 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/22 17:55:38 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "extra_libft.h"
+#include "extra.h"
 
 int	ex_putptr_fd(void *ptr, int fd)
 {
