@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 21:18:44 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/22 22:08:23 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/22 22:55:12 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,7 @@
 # include <unistd.h>
 # include "libft/libft.h"
 # include "extra/extra.h"
+
+int	ft_printf(char *fmt, ...);
 
 #endif

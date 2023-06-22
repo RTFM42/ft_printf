@@ -6,12 +6,12 @@
 #    By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 20:23:39 by yushsato          #+#    #+#              #
-#    Updated: 2023/06/22 17:53:14 by yushsato         ###   ########.fr        #
+#    Updated: 2023/06/22 23:07:53 by yushsato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libftprintf.a
-CC		= gcc 
+CC		= cc 
 FLAGS	= -Wall -Wextra -Werror
 INCL	= -Ift_printf.h \
 		  -Ilibft/libft.h \
