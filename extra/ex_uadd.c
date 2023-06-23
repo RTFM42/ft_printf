@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex_putunbr_base_fd.c                               :+:      :+:    :+:   */
+/*   ex_uadd.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/23 23:41:15 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/23 23:41:16 by yushsato         ###   ########.fr       */
+/*   Created: 2023/06/23 01:21:34 by yushsato          #+#    #+#             */
+/*   Updated: 2023/06/23 23:40:24 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "extra.h"
+#include <limits.h>
 
-int	ex_putunbr_base_fd(size_t n, const char *base, int fd)
+int	ex_uadd(int i1, char i2)
 {
-	int	len;
-	int	res;
-
-	len = ft_strlen(base);
-	res = 1;
-	if (n / len > 0)
-		res += ex_putunbr_base_fd(n / len, base, fd);
-	write(fd, &base[n % len], 1);
-	return (res);
+	if (i1 < 0 || i2 < 0)
+		return (-1);
+	while (i1 + 1 <= INT_MAX && i2 >= 0)
+	{
+		i1++;
+		i2--;
+	}
+	if (i1 <= INT_MAX && i2 == 0)
+		return (i1);
+	if (i1 == INT_MAX && i2 > 0)
+		return (-1);
 }
