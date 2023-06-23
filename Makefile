@@ -6,7 +6,7 @@
 #    By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 20:23:39 by yushsato          #+#    #+#              #
-#    Updated: 2023/06/22 23:07:53 by yushsato         ###   ########.fr        #
+#    Updated: 2023/06/23 23:42:57 by yushsato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ SRCS	= ft_printf.c \
 		  extra/ex_putstr_fd.c \
 		  extra/ex_putunbr_base_fd.c \
 		  extra/ex_putunbr_fd.c \
-		  extra/ex_putva_fd.c
+		  extra/ex_putva_fd.c \
+		  extra/ex_uadd.c
 
 OBJS	= $(SRCS:.c=.o)
 

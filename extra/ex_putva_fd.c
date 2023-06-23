@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 23:41:46 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/23 23:41:47 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/23 23:48:13 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	ex_putva_fd(const char type, va_list *ap, int fd)
 {
 	int	len;
 
+	len = 0;
 	if (type == 'c')
 		len = ex_putchar_fd((char)va_arg(*ap, int), fd);
 	if (type == 's')
