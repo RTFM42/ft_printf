@@ -6,7 +6,7 @@
 #    By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 20:23:39 by yushsato          #+#    #+#              #
-#    Updated: 2023/06/23 23:42:57 by yushsato         ###   ########.fr        #
+#    Updated: 2023/06/23 23:56:23 by yushsato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,3 +49,8 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+norminette:
+	norminette $(SRCS) $(INCL)
+
+norm: norminette
