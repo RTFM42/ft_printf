@@ -6,13 +6,13 @@
 #    By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 20:23:39 by yushsato          #+#    #+#              #
-#    Updated: 2023/06/24 01:08:19 by yushsato         ###   ########.fr        #
+#    Updated: 2023/06/24 23:16:09 by yushsato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libftprintf.a
 CC		= cc 
-FLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror
 INCL	= -Ift_printf.h \
 		  -Ilibft/libft.h \
 		  -Iextra/extra.h
@@ -40,7 +40,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c $(INCL)
-	$(CC) $(CFLG) -c $< -o $@ $(INCL)
+	$(CC) $(CFLGS) -c $< -o $@ $(INCL)
 
 clean:
 	rm -f $(OBJS)
@@ -53,4 +53,4 @@ re: fclean all
 norminette:
 	norminette $(SRCS)
 
-norm: norminette
+norm: norminette .
