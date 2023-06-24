@@ -6,13 +6,13 @@
 #    By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 20:23:39 by yushsato          #+#    #+#              #
-#    Updated: 2023/06/24 23:16:09 by yushsato         ###   ########.fr        #
+#    Updated: 2023/06/24 23:17:35 by yushsato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libftprintf.a
 CC		= cc 
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror # -g -fsanitize=address
 INCL	= -Ift_printf.h \
 		  -Ilibft/libft.h \
 		  -Iextra/extra.h
