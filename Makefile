@@ -6,7 +6,7 @@
 #    By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 20:23:39 by yushsato          #+#    #+#              #
-#    Updated: 2023/06/24 23:38:33 by yushsato         ###   ########.fr        #
+#    Updated: 2023/06/24 23:39:26 by yushsato         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ fclean: clean
 	rm -f $(NAME)
 
 dclean: fclean
-	rm -f ./a.out
+	rm -f ./a.out ./a.out.dSYM
 
 re: fclean all
 
