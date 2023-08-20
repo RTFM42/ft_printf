@@ -40,7 +40,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c $(INCL)
-	$(CC) $(CFLGS) -c $< -o $@ $(INCL)
+	$(CC) $(CFLAGS) -c $< -o $@ $(INCL)
 
 clean:
 	rm -f $(OBJS)
